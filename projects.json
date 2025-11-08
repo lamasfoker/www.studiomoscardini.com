@@ -1,0 +1,384 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Villa VF",
+      "year": 2018,
+      "location": "San Martino in Rio",
+      "client": "Privato",
+      "images": [
+        "image_1.JPEG",
+        "image_2.jpg",
+        "image_3.JPEG",
+        "image_4.JPEG",
+        "image_5.JPEG",
+        "image_6.JPEG",
+        "image_7.JPEG",
+        "image_8.JPEG",
+        "image_9.JPEG",
+        "image_10.JPEG",
+        "image_11.JPEG",
+        "image_12.JPEG",
+        "image_13.JPEG",
+        "image_14.JPEG"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Isi Plast",
+      "year": 2000,
+      "location": "Correggio",
+      "client": "Isi Plast S.P.A.",
+      "images": [
+        "image_1.jpg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpeg",
+        "image_6.jpeg",
+        "image_7.jpeg",
+        "image_8.jpeg",
+        "image_9.jpeg",
+        "image_10.jpeg",
+        "image_11.jpeg"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Vivo il Giardino",
+      "year": 2024,
+      "location": "Rubiera",
+      "client": "F.lli La Spisa S.R.L.",
+      "images": [
+        "image_1.jpg",
+        "image_2.JPG",
+        "image_3.JPG",
+        "image_4.png",
+        "image_5.jpg",
+        "image_6.jpg",
+        "image_7.jpg",
+        "image_8.jpg",
+        "image_9.jpg",
+        "image_10.jpg",
+        "image_11.jpg"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Isi Plast",
+      "year": 1996,
+      "location": "Correggio",
+      "client": "Isi Plast S.P.A.",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpeg",
+        "image_6.jpeg",
+        "image_7.jpeg",
+        "image_8.jpeg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Centro direzionale",
+      "year": 2012,
+      "location": "Rubiera",
+      "client": "Privato",
+      "images": [
+        "image_1.jpg",
+        "image_2.JPG",
+        "image_3.JPG",
+        "image_4.JPEG",
+        "image_5.jpg",
+        "image_6.jpg"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Villa TB",
+      "year": 2015,
+      "location": "San Martino in Rio",
+      "client": "Privato",
+      "collab": "InteriorDesign Maurizio Cardinali",
+      "images": [
+        "image_1.jpg",
+        "image_2.jpg",
+        "image_3.jpg",
+        "image_4.jpg",
+        "image_5.JPEG",
+        "image_6.JPEG",
+        "image_7.JPEG",
+        "image_8.jpg",
+        "image_9.jpg",
+        "image_10.jpg",
+        "image_11.jpg",
+        "image_12.jpg"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Ristorante Lodo60",
+      "year": 2023,
+      "location": "Rio Saliceto",
+      "client": "Privato",
+      "collab": "InteriorDesign Maurizio CardinaliPrivato",
+      "images": [
+        "image_1.JPG",
+        "image_2.jpg",
+        "image_3.jpg",
+        "image_4.JPEG",
+        "image_5.jpg",
+        "image_6.jpg",
+        "image_7.jpg",
+        "image_8.jpg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Condominio Gabicce",
+      "year": 2022,
+      "location": "Gabicce Mare",
+      "client": "Privato",
+      "images": [
+        "image_1.jpg",
+        "image_2.jpg",
+        "image_3.jpeg",
+        "image_4.JPEG",
+        "image_5.jpeg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Villa FT",
+      "year": 2020,
+      "location": "Reggio Emilia",
+      "client": "Privato",
+      "images": [
+        "image_1.JPG"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Centro Direzionale Guerzè",
+      "year": 1996,
+      "location": "Rubiera",
+      "client": "Guerzè S.R.L.",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpeg",
+        "image_6.jpeg",
+        "image_7.jpeg",
+        "image_8.jpeg"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Via Prampolini",
+      "year": 2023,
+      "location": "San Martino in Rio",
+      "client": "Impatto Zero S.R.L.",
+      "images": [
+        "image_1.jpg",
+        "image_2.jpg",
+        "image_3.jpg",
+        "image_4.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Condominio Aurora",
+      "year": 2012,
+      "location": "Rubiera",
+      "client": "Aurora S.R.L.",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpeg",
+        "image_6.jpeg",
+        "image_7.jpeg",
+        "image_8.jpeg",
+        "image_9.jpeg",
+        "image_10.jpeg"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Via Tintoretto",
+      "year": 2020,
+      "location": "Rubiera",
+      "client": "F.lli La Spisa S.R.L.",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpeg"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Condomino S",
+      "year": 1990,
+      "location": "San Martino in Rio",
+      "client": "F.lli La Spisa S.R.L.",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.JPEG",
+        "image_4.jpeg"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Villa C",
+      "year": 1994,
+      "location": "Rubiera",
+      "client": "Privato",
+      "images": [
+        "image_1.jpeg"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "QuartierVerde",
+      "year": 2018,
+      "location": "Vezzano",
+      "client": "Gareri S.R.L. ",
+      "images": [
+        "image_1.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Villa CB",
+      "year": 2023,
+      "location": "Reggio Emilia",
+      "client": "Privato",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpg"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Villa CM",
+      "year": 1995,
+      "location": "San Martino in Rio",
+      "client": "Privato",
+      "images": [
+        "image_1.jpg",
+        "image_2.jpg",
+        "image_3.JPG",
+        "image_4.jpg",
+        "image_5.JPG"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Condominio L",
+      "year": 2020,
+      "location": "Luzzara",
+      "client": "Privato",
+      "images": [
+        "image_1.JPG",
+        "image_2.JPEG",
+        "image_3.JPG",
+        "image_4.JPEG",
+        "image_5.JPEG",
+        "image_6.JPEG"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Villa A",
+      "year": 2006,
+      "location": "Reggio Emilia",
+      "client": "Associazione Colombaro Bonifacio S.R.L.",
+      "images": [
+        "image_1.jpg",
+        "image_2.JPG",
+        "image_3.JPG",
+        "image_4.png",
+        "image_5.png"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Cantina sociale San Martino",
+      "images": [
+        "image_1.jpeg"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Condominio G",
+      "year": 2010,
+      "location": "San Martino in Rio",
+      "client": "Ariete S.R.L.",
+      "images": [
+        "image_1.png",
+        "image_2.JPG",
+        "image_3.JPG",
+        "image_4.JPEG",
+        "image_5.JPEG",
+        "image_6.JPEG",
+        "image_7.JPEG",
+        "image_8.JPEG",
+        "image_9.JPG",
+        "image_10.JPG"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Reggio Emilia",
+      "year": 2020,
+      "location": "Sabbione",
+      "client": "F.lli LaSpisa S.R.L.",
+      "images": [
+        "image_1.jpg"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Condominio R",
+      "year": 2010,
+      "location": "Rubiera",
+      "client": "Cooperativa San Prospero S.R.L.",
+      "images": [
+        "image_1.jpg",
+        "image_2.jpg",
+        "image_3.JPEG",
+        "image_4.JPEG",
+        "image_5.jpg",
+        "image_6.jpg"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Villa FM",
+      "year": 2010,
+      "location": "Rubiera",
+      "client": "Privato",
+      "images": [
+        "image_1.jpeg",
+        "image_2.jpeg",
+        "image_3.jpeg",
+        "image_4.jpeg",
+        "image_5.jpeg",
+        "image_6.jpeg",
+        "image_7.jpeg",
+        "image_8.jpeg"
+      ]
+    }
+  ]
+}

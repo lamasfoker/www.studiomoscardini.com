@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it" x-data="projectPage" x-init="init()">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project listing page with pagination">
-    <meta name="author" content="Your Name">
-    <meta name="keywords" content="HTML, Tailwind CSS, Best Practices">
+    <meta name="description" content="">
+    <meta name="author" content="Studio Moscardini">
+    <meta name="keywords" content="Geometra, Progettazione, Ristrutturazioni, Urbanistica, Studio Tecnico">
 
-    <title>My Project</title>
+    <title x-text="project?.name + ' - Studio Moscardini'">Project</title>
 
     <script>
         if (window.location.hostname.includes("github.io")) {
@@ -18,17 +18,15 @@
     </script>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     <style>
-        body {
-            font-family: sans-serif;
-        }
+        body { font-family: sans-serif; }
     </style>
 </head>
 <body class="bg-white text-black">
+
 <header class="py-4 bg-white">
     <div x-data="{ open: false }" class="container mx-auto flex items-center justify-between px-4">
         <a href="index.html" class="w-52 flex items-center">
@@ -46,7 +44,6 @@
             <a href="index.html" class="hover:underline">Home</a>
             <a href="projects.html" class="hover:underline">Progetti</a>
             <a href="studio.html" class="hover:underline">Studio</a>
-            <a href="#" class="hover:underline">Contatti</a>
         </nav>
 
         <div x-show="open"
@@ -57,84 +54,123 @@
             <a href="index.html" class="hover:underline">Home</a>
             <a href="projects.html" class="hover:underline">Progetti</a>
             <a href="studio.html" class="hover:underline">Studio</a>
-            <a href="#" class="hover:underline">Contatti</a>
         </div>
     </div>
 </header>
 
 <main class="container mx-auto px-4 py-10">
-    <h1 class="text-4xl font-bold text-center mb-4 font-light">Project Title</h1>
-    <p class="text-gray-500 text-center mb-8 font-light">Location: Milan, Italy | Year: 2025 | Client: Impatto Zero Srl</p>
+    <template x-if="project">
+        <div>
+            <h1 class="text-4xl font-bold text-center mb-4 font-light" x-text="project.title"></h1>
+            <p class="text-gray-500 text-center mb-8 font-light"
+               x-text="[
+            project.location ? `Location: ${project.location}` : null,
+            project.year ? `Anno: ${project.year}` : null,
+            project.client ? `Cliente: ${project.client}` : null,
+            project.collab ? `Collaboratore: ${project.collab}` : null,
+         ].filter(Boolean).join(' | ')">
+            </p>
 
-    <div class="max-w-3xl mx-auto text-black text-justify leading-relaxed font-light">
-        <p>
-            This project is a modern residential building designed with cutting-edge civil engineering techniques.
-            It emphasizes structural integrity, energy efficiency, and sustainability.
-        </p>
-    </div>
+            <div class="max-w-3xl mx-auto text-black text-justify leading-relaxed font-light">
+                <p x-text="project.text"></p>
+            </div>
 
-    <div x-data="{
-    activeImage: 0,
-    images: [
-        'https://placehold.co/800x500?text=Excavation',
-        'https://placehold.co/800x500?text=Foundation',
-        'https://placehold.co/800x500?text=Structural+Framework',
-        'https://placehold.co/800x500?text=Exterior+Finishing',
-        'https://placehold.co/800x500?text=Final+Building'
-    ],
-    fullScreen: false
-}" class="mt-10">
+            <div class="mt-10" x-data="{ activeImage: 0, fullScreen: false }" x-init="$watch('project', () => activeImage = 0)">
+                <div class="relative w-full max-w-3xl mx-auto">
+                    <img :src="'/images/project_' + project.id + '/' + project.images[activeImage]" alt="Project image"
+                         class="w-full cursor-pointer"
+                         @click="fullScreen = true">
 
-        <div class="relative w-full max-w-3xl mx-auto">
-            <img :src="images[activeImage]"
-                 class="w-full cursor-pointer"
-                 alt="Construction Stage"
-                 @click="fullScreen = true">
+                    <button @click="activeImage = (activeImage - 1 + project.images.length) % project.images.length"
+                            class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full flex items-center justify-center w-10 h-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                             class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
 
-            <button @click="activeImage = (activeImage - 1 + images.length) % images.length"
-                    class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full flex items-center justify-center w-10 h-10">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                     class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                </svg>
-            </button>
-            <button @click="activeImage = (activeImage + 1) % images.length"
-                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full flex items-center justify-center w-10 h-10">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                     class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-            </button>
+                    <button @click="activeImage = (activeImage + 1) % project.images.length"
+                            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full flex items-center justify-center w-10 h-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                             class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex justify-center space-x-2 mt-4 flex-wrap sm:flex-nowrap">
+                    <template x-for="(image, index) in project.images" :key="index">
+                        <img :src="'/images/project_' + project.id + '/' + image" @click="activeImage = index"
+                             class="w-16 h-12 cursor-pointer border-2 mb-2 sm:mb-0"
+                             :class="{ 'border-blue-500': activeImage === index, 'border-gray-300': activeImage !== index }">
+                    </template>
+                </div>
+
+                <div x-show="fullScreen"
+                     @click.away="fullScreen = false"
+                     class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4"
+                     @keydown.window.escape="fullScreen = false">
+                    <img :src="'/images/project_' + project.id + '/' + project.images[activeImage]" class="max-w-full max-h-full rounded-lg">
+                    <button @click="fullScreen = false"
+                            class="absolute top-4 right-4 text-white bg-gray-900 rounded-full p-2">✖</button>
+                </div>
+            </div>
         </div>
+    </template>
 
-        <div class="flex justify-center space-x-2 mt-4 flex-wrap sm:flex-nowrap">
-            <template x-for="(image, index) in images" :key="index">
-                <img :src="image" @click="activeImage = index"
-                     class="w-16 h-12 cursor-pointer border-2 mb-2 sm:mb-0"
-                     :class="{ 'border-blue-500': activeImage === index, 'border-gray-300': activeImage !== index }">
-            </template>
-        </div>
-
-        <div x-show="fullScreen"
-             @click.away="fullScreen = false"
-             class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4"
-             @keydown.window.escape="fullScreen = false">
-            <img :src="images[activeImage]" class="max-w-full max-h-full rounded-lg">
-            <button @click="fullScreen = false"
-                    class="absolute top-4 right-4 text-white bg-gray-900 rounded-full p-2">
-                ✖
-            </button>
-        </div>
-
-    </div>
-
+    <template x-if="!project">
+        <p class="text-center text-gray-500 mt-10">Progetto non trovato.</p>
+    </template>
 </main>
 
 <footer class="text-center py-4 font-light tracking-widest">
-    <p>Via Gazzata 16, 42018, San Martino in Rio (RE)</p>
-    <p>italo.moscardini@studiomoscardini.com</p>
-    <p>Tel: 0522696600</p>
+    <p>
+        <a href="https://www.google.com/maps/place/Studio+Tecnico+Moscardini/@44.703047,10.7659544,17z/data=!4m15!1m8!3m7!1s0x477ff6bc44c65873:0xb80ec54d7c9f3b43!2sVia+Gazzata,+16,+42018+Gazzata+RE!3b1!8m2!3d44.703047!4d10.7685293!16s%2Fg%2F11h3sn2lyh!3m5!1s0x477ff6bc43479035:0xf109dc7ccc78c333!8m2!3d44.7030398!4d10.7686088!16s%2Fg%2F1hc4wjhn7?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="hover:underline">
+            Via Gazzata 16, 42018, San Martino in Rio (RE)
+        </a>
+    </p>
+    <p>
+        <a href="mailto:italo.moscardini@studiomoscardini.com" class="hover:underline">
+            italo.moscardini@studiomoscardini.com
+        </a>
+    </p>
+    <p>
+        <a href="tel:+390522696600" class="hover:underline">
+            Tel: 0522 696600
+        </a>
+    </p>
 </footer>
 
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('projectPage', () => ({
+            project: null,
+
+            async init() {
+                const params = new URLSearchParams(window.location.search);
+                const id = parseInt(params.get('id'));
+
+                if (!id) return;
+
+                try {
+                    const response = await fetch('projects.json');
+                    const projects = (await response.json()).projects;
+                    this.project = projects.find(p => p.id === id) || null;
+
+                    if (this.project) {
+                        document.title = this.project.title;
+                        document.querySelector('meta[name="description"]').setAttribute('content', this.project.description || '');
+                    }
+                } catch (e) {
+                    console.error('Error loading project data:', e);
+                }
+            },
+
+        }));
+    });
+</script>
 </body>
 </html>
