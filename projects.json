@@ -30,7 +30,7 @@
       "location": "Correggio",
       "client": "Isi Plast S.P.A.",
       "images": [
-        "image_1.jpg",
+        "image_1.jpeg",
         "image_2.jpeg",
         "image_3.jpeg",
         "image_4.jpeg",
@@ -40,7 +40,7 @@
         "image_8.jpeg",
         "image_9.jpeg",
         "image_10.jpeg",
-        "image_11.jpeg"
+        "image_11.jpg"
       ]
     },
     {
@@ -142,11 +142,11 @@
       "location": "Gabicce Mare",
       "client": "Privato",
       "images": [
-        "image_1.jpg",
-        "image_2.jpg",
-        "image_3.jpeg",
+        "image_2.jpeg",
         "image_4.JPEG",
-        "image_5.jpeg"
+        "image_5.jpeg",
+        "image_6.jpg",
+        "image_7.jpg"
       ]
     },
     {
@@ -290,8 +290,8 @@
       "location": "Luzzara",
       "client": "Privato",
       "images": [
-        "image_1.JPG",
-        "image_2.JPEG",
+        "image_1.JPEG",
+        "image_2.JPG",
         "image_3.JPG",
         "image_4.JPEG",
         "image_5.JPEG",
@@ -335,7 +335,8 @@
         "image_7.JPEG",
         "image_8.JPEG",
         "image_9.JPG",
-        "image_10.JPG"
+        "image_10.JPG",
+        "image_11.jpeg"
       ]
     },
     {

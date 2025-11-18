@@ -100,11 +100,17 @@
                         }
 
                         newProjects.forEach(proj => {
+                            let tag = 'a';
+                            let cssClass = `href="project.html?id=${proj.id}"`;
+                            if (proj.images.length < 2) {
+                                tag = 'div';
+                                cssClass = '';
+                            }
                             const projectHTML = `
-                        <a href="project.html?id=${proj.id}" class="overflow-hidden hover:underline">
+                        <${tag} ${cssClass} class="overflow-hidden hover:underline">
                             <img src="images/project_${proj.id}/${proj.images[0]}" alt="${proj.name}" class="w-full h-64 object-cover">
                             <h2 class="text-xl font-light p-4">${proj.name}</h2>
-                        </a>
+                        </${tag}>
                     `;
                             document.getElementById('project-list').insertAdjacentHTML('beforeend', projectHTML);
                         });
