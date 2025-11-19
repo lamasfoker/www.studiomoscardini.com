@@ -341,16 +341,6 @@
     },
     {
       "id": 23,
-      "name": "Reggio Emilia",
-      "year": 2020,
-      "location": "Sabbione",
-      "client": "F.lli LaSpisa S.R.L.",
-      "images": [
-        "image_1.jpg"
-      ]
-    },
-    {
-      "id": 24,
       "name": "Condominio R",
       "year": 2010,
       "location": "Rubiera",
@@ -365,7 +355,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": 24,
       "name": "Villa FM",
       "year": 2010,
       "location": "Rubiera",
